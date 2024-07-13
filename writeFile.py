@@ -23,11 +23,11 @@ with open(filePath_2, "w") as ficher:
     for player in goats:
         ficher.write("\n" + player)
 
-    print(f"C bon est il cree! dqns le chemin: {filePath_2}")
+    print(f"C bon est il cree! dans le chemin: {filePath_2}")
 #string text txt
 with open(filePath_1, "w") as ficher:
     ficher.write(value)
-    print(f"C bon est il cree! dqns le chemin: {filePath_1}")
+    print(f"C bon est il cree! dans le chemin: {filePath_1}")
 
 # jason dectinaire
 
