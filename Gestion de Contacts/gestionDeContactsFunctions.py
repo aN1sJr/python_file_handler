@@ -6,15 +6,17 @@ def ajouter(path):
     numero = input("Entrer son numero de telephone: ")
 
     with open(path, "a") as contact:
-        contact.write(nom + ": " + numero+ "´\n")
+        contact.write(nom + "son numero est: " + numero + "\n")
 
 
 def afficher(path):
+    counter = 0
     with open(path, "r") as contact:
         contacts = contact.readlines()
     if contacts:
         for i in contacts:
-            print(i.strip())
+            counter= counter + 1
+            print(f"{counter}) {i}")
     else:
         print("aucun contact a afficher!")
 
@@ -22,7 +24,7 @@ def afficher(path):
 def recharcher(path):
     status = False
     nom = input("Entrer le nom que vous voulez chercher: ")
-    if os.path.exists():
+    if os.path.exists(path):
         with open(path, "r") as contact:
             contacts = contact.readlines()
 
